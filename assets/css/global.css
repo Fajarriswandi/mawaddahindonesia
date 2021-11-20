@@ -1,4 +1,129 @@
+@import url("http://fonts.cdnfonts.com/css/elephant");
+.shadow {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-sm {
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg, .navigationContainer .logo {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-none {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 body {
   background: #121828;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Elephant", sans-serif;
+}
+
+.navigationContainer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121828), to(rgba(18, 24, 40, 0)));
+  background: linear-gradient(to bottom, #121828 0%, rgba(18, 24, 40, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121828', endColorstr='#00121828',GradientType=0 );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigationContainer .logo {
+  background: #232d48;
+  display: table;
+  padding: 35px 20px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin: 0 20px 20px 20px;
+}
+
+.navigationContainer .menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigationContainer .menuList li {
+  position: relative;
+}
+
+.navigationContainer .menuList li a {
+  display: table;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+.navigationContainer .menuList li a:hover {
+  color: #e4a630;
+}
+
+.navigationContainer .menuList li.active a {
+  color: #e4a630;
+}
+
+.navigationContainer .menuList li.active::after {
+  background: url("../img/active.svg") no-repeat center center;
+  background-size: contain;
+  display: table;
+  width: 50px;
+  height: 20px;
+  content: " ";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.headerHomepage {
+  background: url("../img/bgHeaderHome.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerHomepage h1 {
+  font-family: "Elephant", sans-serif;
+  color: white;
 }
 /*# sourceMappingURL=global.css.map */

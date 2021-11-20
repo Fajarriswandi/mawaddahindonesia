@@ -1,3 +1,94 @@
-body{
+body {
     background: $primary;
+    color: white;
 }
+
+h1,h2,h3,h4,h5,h6{
+    font-family:$Elephan;
+}
+
+// Navigation container
+.navigationContainer {
+    @include gradientPrimaryVertical();
+    // background: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .logo {
+        background: $primary2;
+        display: table;
+        padding: 35px 20px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        margin: 0 20px 20px 20px;
+        @extend .shadow-lg ;
+    }
+
+    .menuList {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            position: relative;
+            a {
+                display: table;
+                // border: 1px solid #000;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 15px 25px;
+                color: white;
+                text-decoration: none;
+                transition: 0.2s ease;
+                text-align: center;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+            &.active {
+                a{
+                    color: $secondary;
+                }
+                &::after {
+                    background: url("../img/active.svg") no-repeat center center;
+                    background-size: contain;
+                    display: table;
+                    width: 50px;
+                    height: 20px;
+                    content: " ";
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+// Navigation container
+
+
+// Header homepage
+
+.headerHomepage{
+    background: url('../img/bgHeaderHome.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-family: $Elephan;
+        color: white;
+    }
+}
+
+// Header homepage

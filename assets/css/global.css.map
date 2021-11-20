@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,IAAI,CAAA;EACA,UAAU,EHAL,OAAO;CGCf",
+    "sources": [
+        "global.scss",
+        "_variable.scss",
+        "_framework.scss",
+        "_anim.scss",
+        "_theme.scss"
+    ],
+    "names": [],
+    "file": "global.css"
+}

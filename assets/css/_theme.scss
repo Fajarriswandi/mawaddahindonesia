@@ -3,14 +3,18 @@ body {
     color: white;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family:$Elephan;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $Elephan;
 }
 
 // Navigation container
 .navigationContainer {
     @include gradientPrimaryVertical();
-    // background: orange;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,6 +23,27 @@ h1,h2,h3,h4,h5,h6{
     top: 0;
     left: 0;
     width: 100%;
+    transition:0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    @media (max-width: $tablet) {
+        background: hsla(225, 40%, 6%, 0.74);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        max-width: 300px;
+        height: 100vh;
+        justify-content: flex-start;
+        padding-top: 10em;
+        margin-left: -300px;
+        position: fixed;
+        .item{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 300px){
+        width: 100%;
+    }
 
     .logo {
         background: $primary2;
@@ -27,7 +52,21 @@ h1,h2,h3,h4,h5,h6{
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
         margin: 0 20px 20px 20px;
-        @extend .shadow-lg ;
+        transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        @extend .shadow-lg;
+        @media (max-width: $tablet) {
+            position: absolute;
+            top: 0;
+            left: 48px;
+        }
+        @media (max-width: 300px){
+            left: 40%;
+            transform: translateX(-40%);
+            padding: 20px 15px;
+            img{
+                width: 50px;
+            }
+        }
     }
 
     .menuList {
@@ -35,11 +74,13 @@ h1,h2,h3,h4,h5,h6{
         list-style: none;
         margin: 0;
         padding: 0;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
         li {
             position: relative;
             a {
                 display: table;
-                // border: 1px solid #000;
                 font-size: 18px;
                 font-weight: 500;
                 padding: 15px 25px;
@@ -50,9 +91,14 @@ h1,h2,h3,h4,h5,h6{
                 &:hover {
                     color: $secondary;
                 }
+                @media (max-width: $tablet) {
+                    width: 100%;
+                    // background: red;
+                    // border-bottom: 1px solid blue;
+                }
             }
             &.active {
-                a{
+                a {
                     color: $secondary;
                 }
                 &::after {
@@ -66,18 +112,85 @@ h1,h2,h3,h4,h5,h6{
                     bottom: -10px;
                     left: 50%;
                     transform: translateX(-50%);
+                    @media (max-width: $tablet) {
+                        bottom: 0px;
+                    }
                 }
             }
         }
     }
 }
-// Navigation container
 
+.openMenu{
+    margin-left: 0;
+}
+
+.logoMobile{
+    display: none;
+    @media(max-width: $tablet){
+        display: table;
+        background: $primary2;
+        padding: 35px 20px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        margin: 0 20px 20px 20px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 1000;
+        margin-top:0;
+        transform: translateX(-50%);
+        transition:0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        &.closeLogoMobile{
+            margin-top: -150px;
+        }
+    }
+    @media(max-width: 450px){
+        left: 5%;
+        padding: 25px 15px;
+        transform: translateX(-5%);
+        img{
+            width: 80px;
+        }
+    }
+}
+
+.navMobileTrigger{
+    display: none;
+    @media(max-width: $tablet){
+        display: table;
+        content: '';
+        width: 45px;
+        height: 45px;
+        background: $primary2 url('../img/menuMobile.svg') center center;
+        background-size: 80%;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        border-radius: 5px;
+        z-index: 1000;
+        transition: 0.3s ease;
+    }
+
+    @media(max-width: 450px){
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &.closeIcon{
+        background: $secondary url('../img/closeMenu.svg') no-repeat center center;
+        background-size: 80%;
+    }
+}
+
+// Navigation container
 
 // Header homepage
 
-.headerHomepage{
-    background: url('../img/bgHeaderHome.png') no-repeat center center;
+.headerHomepage {
+    background: url("../img/bgHeaderHome.png") no-repeat center center;
     background-size: cover;
     height: 100vh;
 
@@ -85,20 +198,20 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
     align-items: center;
 
-    h1{
+    h1 {
         font-family: $Elephan;
         color: white;
     }
 
-    .item{
-        &.image{
+    .item {
+        &.image {
             // background: orange;
             width: 25%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        &.content{
+        &.content {
             width: 30%;
             // background: blue;
         }
@@ -108,7 +221,7 @@ h1,h2,h3,h4,h5,h6{
 // Header homepage
 
 // Sosmed Fixed
-.sosmedFixed{
+.sosmedFixed {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -121,25 +234,25 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    li{
+    li {
         margin-bottom: 15px;
-        a{
+        a {
             display: table;
             color: $secondary;
             padding: 5px;
             border-radius: 100px;
             transition: 0.2s ease;
-            img{
+            img {
                 width: 30px;
                 height: auto;
             }
-            &:hover{
+            &:hover {
                 background: $primary2;
             }
         }
     }
-    &::before{
-        content: '';
+    &::before {
+        content: "";
         display: table;
         width: 1px;
         height: 25vh;
@@ -150,8 +263,8 @@ h1,h2,h3,h4,h5,h6{
         transform: translateX(-50%);
         border-radius: 5px;
     }
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         display: table;
         width: 1px;
         height: 25vh;

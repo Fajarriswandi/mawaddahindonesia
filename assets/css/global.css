@@ -62,7 +62,12 @@ body {
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Elephant", sans-serif;
 }
 
@@ -87,6 +92,37 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (max-width: 1100px) {
+  .navigationContainer {
+    background: rgba(9, 12, 21, 0.74);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 300px;
+    height: 100vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 10em;
+    margin-left: -300px;
+    position: fixed;
+  }
+  .navigationContainer .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .navigationContainer {
+    width: 100%;
+  }
 }
 
 .navigationContainer .logo {
@@ -96,6 +132,28 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   margin: 0 20px 20px 20px;
+  -webkit-transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 1100px) {
+  .navigationContainer .logo {
+    position: absolute;
+    top: 0;
+    left: 48px;
+  }
+}
+
+@media (max-width: 300px) {
+  .navigationContainer .logo {
+    left: 40%;
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+    padding: 20px 15px;
+  }
+  .navigationContainer .logo img {
+    width: 50px;
+  }
 }
 
 .navigationContainer .menuList {
@@ -105,6 +163,15 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 1100px) {
+  .navigationContainer .menuList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .navigationContainer .menuList li {
@@ -127,6 +194,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #e4a630;
 }
 
+@media (max-width: 1100px) {
+  .navigationContainer .menuList li a {
+    width: 100%;
+  }
+}
+
 .navigationContainer .menuList li.active a {
   color: #e4a630;
 }
@@ -143,6 +216,91 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 1100px) {
+  .navigationContainer .menuList li.active::after {
+    bottom: 0px;
+  }
+}
+
+.openMenu {
+  margin-left: 0;
+}
+
+.logoMobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .logoMobile {
+    display: table;
+    background: #232d48;
+    padding: 35px 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin: 0 20px 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 1000;
+    margin-top: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .logoMobile.closeLogoMobile {
+    margin-top: -150px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logoMobile {
+    left: 5%;
+    padding: 25px 15px;
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  .logoMobile img {
+    width: 80px;
+  }
+}
+
+.navMobileTrigger {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .navMobileTrigger {
+    display: table;
+    content: '';
+    width: 45px;
+    height: 45px;
+    background: #232d48 url("../img/menuMobile.svg") center center;
+    background-size: 80%;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border-radius: 5px;
+    z-index: 1000;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}
+
+@media (max-width: 450px) {
+  .navMobileTrigger {
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.navMobileTrigger.closeIcon {
+  background: #e4a630 url("../img/closeMenu.svg") no-repeat center center;
+  background-size: 80%;
 }
 
 .headerHomepage {
@@ -230,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sosmedFixed::before {
-  content: '';
+  content: "";
   display: table;
   width: 1px;
   height: 25vh;
@@ -244,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sosmedFixed::after {
-  content: '';
+  content: "";
   display: table;
   width: 1px;
   height: 25vh;

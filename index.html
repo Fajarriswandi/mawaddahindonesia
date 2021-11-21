@@ -1,3 +1,8 @@
+<!-- ====================================
+Created by : Fajar riswandi
+https://www.linkedin.com/in/fajar-riswandi/
+Note : please don't delete it to respect my work
+==================================== -->
 <!DOCTYPE html>
 <html lang="id">
 
@@ -5,6 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
     <title>Mawaddah Indonesia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
@@ -15,17 +22,17 @@
     <!-- Navigation -->
 
     <div id="mainNavigation" class="navigationContainer">
-        <div>
+        <div class="item">
             <ul class="menuList">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Ta'aruf</a></li>
                 <li><a href="#">Walimah</a></li>
             </ul>
         </div>
-        <div>
+        <div class="item">
             <a class="logo" href="#"><img src="assets/img/logo.png" alt="Mawaddah Indonesia" class="img-fluid"></a>
         </div>
-        <div>
+        <div class="item">
             <ul class="menuList">
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">About</a></li>
@@ -34,11 +41,16 @@
         </div>
     </div>
 
+    <div id="navMobileTrigger" class="navMobileTrigger" onclick="openMenuMobile()"></div>
+    <a href="#" id="logoMobile" class="logoMobile"><img src="assets/img/logo.png" alt="Mawaddah Indonesia" class="img-fluid"></a>
+
     <!-- Navigation -->
+
+
 
     <!-- Sosmed fixed -->
 
-    <ul class="sosmedFixed">
+    <ul class="sosmedFixed d-none">
         <li><a href="#"><img src="assets/img/sosmed/facebook.svg" alt="Facebook" class="img-fluid"></a></li>
         <li><a href="#"><img src="assets/img/sosmed/instagram.svg" alt="Facebook" class="img-fluid"></a></li>
         <li><a href="#"><img src="assets/img/sosmed/twitter.svg" alt="Facebook" class="img-fluid"></a></li>
@@ -50,18 +62,31 @@
 
     <!-- Header Homepage -->
 
-    <div class="headerHomepage">
-        <div class="item image"><img src="assets/img/TaarufSyari.svg" alt="Ta'aruf Syar'i - Mawadah Indonesia" class="img-fluid"></div>
+    <div class="headerHomepage d-none1">
+        <div class="item image"><img src="assets/img/TaarufSyari.svg" alt="Ta'aruf Syar'i - Mawadah Indonesia"
+                class="img-fluid"></div>
         <div class="item content">
             <h2>Manajemen rumah tangga islami</h2>
-            <p>Mawaddah Indonesia adalah wadah Ta’aruf binaan langsung Ustadz Khalid Basalamah yang mengutamakan proses Syar’i dalam memperoleh pasangan hidup yang Allah Ridhai.</p>
+            <p>Mawaddah Indonesia adalah wadah Ta’aruf binaan langsung Ustadz Khalid Basalamah yang mengutamakan proses
+                Syar’i dalam memperoleh pasangan hidup yang Allah Ridhai.</p>
             <a href="#" class="btn btn-primary btn-lg">Daftar gratis</a>
         </div>
     </div>
 
     <!-- Header Homepage -->
-    
 
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
+    <p>asd</p><br>
 
 
 
@@ -75,7 +100,19 @@
 
     <!-- Footer resource -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
 
+        function openMenuMobile() {
+            var openMenu = document.getElementById("mainNavigation");
+            openMenu.classList.toggle("openMenu");
+
+            var openCloseIcon = document.getElementById("navMobileTrigger");
+            openCloseIcon.classList.toggle("closeIcon");
+
+            var closeLogoMobile = document.getElementById("logoMobile");
+            closeLogoMobile.classList.toggle("closeLogoMobile");
+        }
+    </script>
 </body>
 
 </html>

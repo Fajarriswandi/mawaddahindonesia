@@ -19,11 +19,18 @@ h6 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    z-index: 1000;
+
+    @media (min-width: $tablet) {
+        &.menuOnScroll {
+            margin-top: -25px;
+        }
+    }
 
     @media (max-width: $tablet) {
         background: hsla(225, 40%, 6%, 0.74);
@@ -250,6 +257,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 900;
 
     @media (max-width: $tablet) {
         background: $secondary;
@@ -358,7 +366,33 @@ h6 {
     border-radius: 50%;
     transition: 0.3s ease;
     cursor: pointer;
-    &:hover{
+    z-index: 900;
+    &:hover {
         background: $secondary url("../img/iconWhatsapp.svg") no-repeat center center;
     }
 }
+
+// Section content image
+
+.sectionContentImage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after {
+        content: "";
+        display: table;
+        width: 200px;
+        height: 90%;
+        background:  url("../img/bgAksenLeft.svg") no-repeat left center;
+        background-size:contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 1;
+    }
+}
+
+// Section content image

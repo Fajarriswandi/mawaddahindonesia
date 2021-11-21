@@ -60,7 +60,9 @@ Note : please don't delete it to respect my work
 
     <div id="btnSosmedTrigger" onclick="openShare()"></div>
 
-    <div id="btnWhatsApp" onclick="window.open('https://wa.me/081113302121?text=السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ')"></div>
+    <div id="btnWhatsApp"
+        onclick="window.open('https://wa.me/081113302121?text=السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ')">
+    </div>
 
     <!-- Sosmed fixed -->
 
@@ -80,18 +82,16 @@ Note : please don't delete it to respect my work
 
     <!-- Header Homepage -->
 
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
-    <p>asd</p><br>
+
+    <!-- Section 1 -->
+
+    <div class="sectionContentImage">
+        <div class="item">
+            asd
+        </div>
+    </div>
+
+    <!-- Section 1 -->
 
 
 
@@ -104,6 +104,7 @@ Note : please don't delete it to respect my work
 
 
     <!-- Footer resource -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
@@ -126,6 +127,16 @@ Note : please don't delete it to respect my work
             closeShare.classList.toggle("closeShare");
 
         }
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $(".navigationContainer").addClass("menuOnScroll");
+                } else {
+                    $(".navigationContainer").removeClass("menuOnScroll");
+                }
+            });
+        });
 
 
     </script>

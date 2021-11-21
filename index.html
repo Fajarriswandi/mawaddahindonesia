@@ -42,7 +42,8 @@ Note : please don't delete it to respect my work
     </div>
 
     <div id="navMobileTrigger" class="navMobileTrigger" onclick="openMenuMobile()"></div>
-    <a href="#" id="logoMobile" class="logoMobile"><img src="assets/img/logo.png" alt="Mawaddah Indonesia" class="img-fluid"></a>
+    <a href="#" id="logoMobile" class="logoMobile"><img src="assets/img/logo.png" alt="Mawaddah Indonesia"
+            class="img-fluid"></a>
 
     <!-- Navigation -->
 
@@ -50,12 +51,16 @@ Note : please don't delete it to respect my work
 
     <!-- Sosmed fixed -->
 
-    <ul class="sosmedFixed d-none">
+    <ul id="sosmedFixed" class="sosmedFixed d-none1">
         <li><a href="#"><img src="assets/img/sosmed/facebook.svg" alt="Facebook" class="img-fluid"></a></li>
         <li><a href="#"><img src="assets/img/sosmed/instagram.svg" alt="Facebook" class="img-fluid"></a></li>
         <li><a href="#"><img src="assets/img/sosmed/twitter.svg" alt="Facebook" class="img-fluid"></a></li>
         <li><a href="#"><img src="assets/img/sosmed/youtube.svg" alt="Facebook" class="img-fluid"></a></li>
     </ul>
+
+    <div id="btnSosmedTrigger" onclick="openShare()"></div>
+
+    <div id="btnWhatsApp" onclick="window.open('https://wa.me/081113302121?text=السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ')"></div>
 
     <!-- Sosmed fixed -->
 
@@ -112,6 +117,17 @@ Note : please don't delete it to respect my work
             var closeLogoMobile = document.getElementById("logoMobile");
             closeLogoMobile.classList.toggle("closeLogoMobile");
         }
+
+        function openShare() {
+            var openShareSosmed = document.getElementById("sosmedFixed");
+            openShareSosmed.classList.toggle("openSosmed");
+
+            var closeShare = document.getElementById("btnSosmedTrigger");
+            closeShare.classList.toggle("closeShare");
+
+        }
+
+
     </script>
 </body>
 

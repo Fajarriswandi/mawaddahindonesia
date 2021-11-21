@@ -113,6 +113,7 @@ h6 {
     padding-top: 10em;
     margin-left: -300px;
     position: fixed;
+    z-index: 1000;
   }
   .navigationContainer .item {
     width: 100%;
@@ -274,7 +275,7 @@ h6 {
 @media (max-width: 1100px) {
   .navMobileTrigger {
     display: table;
-    content: '';
+    content: "";
     width: 45px;
     height: 45px;
     background: #232d48 url("../img/menuMobile.svg") center center;
@@ -318,6 +319,15 @@ h6 {
           align-items: center;
 }
 
+@media (max-width: 1100px) {
+  .headerHomepage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .headerHomepage h1 {
   font-family: "Elephant", sans-serif;
   color: white;
@@ -334,10 +344,36 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 1100px) {
+  .headerHomepage .item.image {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerHomepage .item.image {
+    width: 40%;
+  }
+}
+
+@media (max-width: 300px) {
+  .headerHomepage .item.image {
+    width: 60%;
+  }
 }
 
 .headerHomepage .item.content {
   width: 30%;
+}
+
+@media (max-width: 1100px) {
+  .headerHomepage .item.content {
+    text-align: center;
+    width: 70%;
+  }
 }
 
 .sosmedFixed {
@@ -365,8 +401,37 @@ h6 {
           align-items: center;
 }
 
+@media (max-width: 1100px) {
+  .sosmedFixed {
+    background: #e4a630;
+    height: auto;
+    overflow: hidden;
+    padding: 15px 10px 5px 10px;
+    border-radius: 100px;
+    width: 60px;
+    top: unset;
+    -webkit-transform: translateY(unset);
+            transform: translateY(unset);
+    left: unset;
+    bottom: 60px;
+    right: -100px;
+    -webkit-transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.sosmedFixed.openSosmed {
+  right: 20px;
+}
+
 .sosmedFixed li {
   margin-bottom: 15px;
+}
+
+@media (max-width: 1100px) {
+  .sosmedFixed li {
+    margin-bottom: 10px;
+  }
 }
 
 .sosmedFixed li a {
@@ -387,6 +452,12 @@ h6 {
   background: #232d48;
 }
 
+@media (max-width: 1100px) {
+  .sosmedFixed li a {
+    background: #232d48;
+  }
+}
+
 .sosmedFixed::before {
   content: "";
   display: table;
@@ -401,6 +472,12 @@ h6 {
   border-radius: 5px;
 }
 
+@media (max-width: 1100px) {
+  .sosmedFixed::before {
+    display: none;
+  }
+}
+
 .sosmedFixed::after {
   content: "";
   display: table;
@@ -413,5 +490,54 @@ h6 {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border-radius: 5px;
+}
+
+@media (max-width: 1100px) {
+  .sosmedFixed::after {
+    display: none;
+  }
+}
+
+#btnSosmedTrigger {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #btnSosmedTrigger {
+    background: #232d48 url("../img/iconShare.svg") no-repeat center center;
+    background-size: 50%;
+    content: "";
+    display: table;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    border-radius: 50%;
+  }
+}
+
+#btnSosmedTrigger.closeShare {
+  background: #e4a630 url("../img/closeMenu.svg") no-repeat center center;
+}
+
+#btnWhatsApp {
+  background: #232d48 url("../img/iconWhatsapp.svg") no-repeat center center;
+  background-size: 50%;
+  content: "";
+  display: table;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#btnWhatsApp:hover {
+  background: #e4a630 url("../img/iconWhatsapp.svg") no-repeat center center;
 }
 /*# sourceMappingURL=global.css.map */

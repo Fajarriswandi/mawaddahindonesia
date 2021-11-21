@@ -1,3 +1,4 @@
+// Shadow
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
@@ -12,4 +13,40 @@
 
 .shadow-none {
     box-shadow: none !important;
+}
+
+// Button
+
+.btn {
+    border-radius: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: rgba(255, 255, 255, 0);
+    &.btn-lg {
+        padding: 15px 35px;
+    }
+    &.btn-primary {
+        position: relative;
+        border-color: $secondary;
+        color: $primary;
+        font-weight: 700;
+        background: #f7b02c url('../img/bgButton.svg') no-repeat bottom left;
+        background-size: contain;
+        &::before{
+            display: table;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 100px;
+            z-index: -1;
+            background: #E6A120;
+        }
+        &:hover{
+            background: #ffc65b url('../img/bgButton.svg') no-repeat bottom left;
+            background-size: contain;
+        }        
+    }
 }

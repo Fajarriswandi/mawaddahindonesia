@@ -89,6 +89,77 @@ h1,h2,h3,h4,h5,h6{
         font-family: $Elephan;
         color: white;
     }
+
+    .item{
+        &.image{
+            // background: orange;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &.content{
+            width: 30%;
+            // background: blue;
+        }
+    }
 }
 
 // Header homepage
+
+// Sosmed Fixed
+.sosmedFixed{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li{
+        margin-bottom: 15px;
+        a{
+            display: table;
+            color: $secondary;
+            padding: 5px;
+            border-radius: 100px;
+            transition: 0.2s ease;
+            img{
+                width: 30px;
+                height: auto;
+            }
+            &:hover{
+                background: $primary2;
+            }
+        }
+    }
+    &::before{
+        content: '';
+        display: table;
+        width: 1px;
+        height: 25vh;
+        background: $primary2;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+    &::after{
+        content: '';
+        display: table;
+        width: 1px;
+        height: 25vh;
+        background: $primary2;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+}

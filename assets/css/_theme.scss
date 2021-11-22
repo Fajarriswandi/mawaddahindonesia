@@ -133,6 +133,22 @@ h6 {
     margin-left: 0;
 }
 
+.bgMenuMobile{
+    display: none;
+    content: '';
+    width: 100%;
+    height: 150px;
+    background: orange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 899;
+    @include gradientPrimaryVertical();
+    @media (max-width: $tablet){
+        display: table;
+    }
+}
+
 .logoMobile {
     display: none;
     @media (max-width: $tablet) {
@@ -154,9 +170,9 @@ h6 {
         }
     }
     @media (max-width: 450px) {
-        left: 5%;
+        left: 45%;
         padding: 25px 15px;
-        transform: translateX(-5%);
+        transform: translateX(-45%);
         img {
             width: 80px;
         }
@@ -336,6 +352,7 @@ h6 {
 
 #btnSosmedTrigger {
     display: none;
+    z-index: 900;
     @media (max-width: $tablet) {
         background: $primary2 url("../img/iconShare.svg") no-repeat center center;
         background-size: 50%;
@@ -377,22 +394,212 @@ h6 {
 .sectionContentImage {
     height: 100vh;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-    &::after {
-        content: "";
-        display: table;
-        width: 200px;
-        height: 90%;
-        background:  url("../img/bgAksenLeft.svg") no-repeat left center;
-        background-size:contain;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        z-index: 1;
+    background: url("../img/bgAksenLeft.svg") no-repeat left center;
+    transition: 0.3s ease-in-out;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    img {
+        width: 28%;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 25px;
+        @media (max-width: $tablet) {
+            width: 80%;
+            height: 70vh;
+            margin-top: 0em;
+        }
+        @media (max-width: 400px) {
+            width: 80%;
+            height: 50vh;
+            margin-top: 3em;
+        }
+    }
+    .contentContainer {
+        position: relative;
+        width: 25%;
+        height: 60vh;
+        @media (max-width: $tablet) {
+            width: 80%;
+            margin-top: -10em;
+            margin-bottom: 3em;
+        }
+        @media (max-width: 400px) {
+            width: 80%;
+            margin-top: -20em;
+            margin-bottom: 3em;
+        }
+        .content {
+            background: $primary url("../img/dividerVertical.svg") no-repeat top left;
+            background-position: 30px 20px;
+            padding: 50px 60px 50px 90px;
+            border-radius: 0 200px 200px 0;
+            position: absolute;
+            bottom: 5%;
+            right: -40%;
+            @media (max-width: $tablet) {
+                right: 0;
+                border-radius: 25px;
+                background-color: rgba(18, 24, 40, 0.9);
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+            }
+            @media (max-width: 400px) {
+                background: rgba(18, 24, 40, 0.9);
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                right: 0;
+                padding: 30px;
+            }
+            h4 {
+                font-family: unset;
+                color: $secondary;
+                font-size: 18px;
+            }
+            h2 {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &.right {
+        flex-direction: row;
+        background: url("../img/bgAksenRight.svg") no-repeat right center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            height: 80vh;
+        }
+
+        img {
+            width: 28%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: 25px;
+            @media (max-width: $tablet) {
+                width: 80%;
+                height: 70vh;
+                margin-top: 0em;
+            }
+            @media (max-width: 400px) {
+                width: 80%;
+                height: 50vh;
+                margin-top: 3em;
+            }
+        }
+        .contentContainer {
+            position: relative !important;
+            width: 25%;
+            height: 60vh;
+            left: -10%;
+            @media (max-width: $tablet) {
+                width: 80%;
+                margin-top: -10em;
+                margin-bottom: 3em;
+                left: 0;
+            }
+            @media (max-width: 400px) {
+                width: 80%;
+                margin-top: -20em;
+                margin-bottom: 3em;
+            }
+            .content {
+                background: $primary url("../img/dividerVertical.svg") no-repeat top right;
+                padding: 50px 60px 50px 60px;
+                border-radius: 200px 0 0 200px;
+                position: absolute;
+                bottom: 5%;
+                text-align: right;
+                @media (max-width: $tablet) {
+                    background-position: 30px 20px;
+                    padding: 50px 60px 50px 90px;
+                    border-radius: 0 200px 200px 0;
+                    background-color: rgba(18, 24, 40, 0.9);
+                    -webkit-backdrop-filter: blur(15px);
+                    backdrop-filter: blur(15px);
+                    border-radius: 25px;
+                    display: table;
+                    text-align: unset;
+                }
+                @media (max-width: 400px) {
+                    background: rgba(18, 24, 40, 0.9);
+                    -webkit-backdrop-filter: blur(15px);
+                    backdrop-filter: blur(15px);
+                    right: 0;
+                    padding: 30px;
+                }
+                h4 {
+                    font-family: unset;
+                    color: $secondary;
+                    font-size: 18px;
+                }
+                h2 {
+                    margin-bottom: 0px;
+                }
+            }
+        }
     }
 }
 
 // Section content image
+
+// Title section
+.titleSection{
+    text-align: center;
+}
+// Title section
+
+// Event Organizer
+.eventOrganizer{
+    background:  url('../img/bgEventorganizer.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .listEO{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        li{
+            width: 16.66%;
+            padding: 15px 20px;
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px;
+                margin-bottom: 15px;
+                transition: 0.3s ease;
+                border: 4px solid transparent;
+            }
+            h5{
+                font-family: unset;
+                text-align: center;
+                color: $secondary;
+                height: 70px;
+            }
+            &:hover{
+                img{
+                    border: 4px solid $secondary;
+                }
+            }
+        }
+    }
+}
+// Event Organizer

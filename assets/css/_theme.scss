@@ -133,9 +133,9 @@ h6 {
     margin-left: 0;
 }
 
-.bgMenuMobile{
+.bgMenuMobile {
     display: none;
-    content: '';
+    content: "";
     width: 100%;
     height: 150px;
     background: orange;
@@ -144,7 +144,7 @@ h6 {
     left: 0;
     z-index: 899;
     @include gradientPrimaryVertical();
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
         display: table;
     }
 }
@@ -551,14 +551,14 @@ h6 {
 // Section content image
 
 // Title section
-.titleSection{
+.titleSection {
     text-align: center;
 }
 // Title section
 
 // Event Organizer
-.eventOrganizer{
-    background:  url('../img/bgEventorganizer.png') no-repeat center center;
+.eventOrganizer {
+    background: url("../img/bgEventorganizer.png") no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -566,8 +566,12 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: $tablet) {
+        height: auto;
+        padding: 3em 20px;
+    }
 
-    .listEO{
+    .listEO {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -576,30 +580,121 @@ h6 {
         justify-content: center;
         align-items: center;
         width: 80%;
-        li{
+        @media (max-width: 1400px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+        @media (max-width: 450px) {
+            width: 100%;
+        }
+        li {
             width: 16.66%;
             padding: 15px 20px;
-            img{
+            border-radius: 15px;
+            transition: 0.2s ease;
+            @media (max-width: 1400px) {
+                width: 26.66%;
+            }
+            @media (max-width: 800px) {
+                width: 50%;
+                margin-bottom: -40px;
+            }
+
+            img {
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
                 border-radius: 15px;
                 margin-bottom: 15px;
-                transition: 0.3s ease;
-                border: 4px solid transparent;
+                @media (max-width: 450px) {
+                    height: 150px;
+                }
             }
-            h5{
+            h5 {
                 font-family: unset;
                 text-align: center;
                 color: $secondary;
                 height: 70px;
-            }
-            &:hover{
-                img{
-                    border: 4px solid $secondary;
+                @media (max-width: 450px) {
+                    font-size: 16px;
                 }
+            }
+            &:hover {
+                background: $primary2;
             }
         }
     }
 }
 // Event Organizer
+
+// Footer
+.footerContainer {
+    background:  url('../img/bgFooter.svg') no-repeat bottom center;
+    background-size:auto;
+    padding: 6em 0 10em 0;
+    position: relative;
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        
+        @media(max-width:1150px){
+            flex-direction: column;
+        }
+        @media(max-width:$tablet){width: 100%;}
+
+        .item {
+            
+            .menuFooter{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+                li{
+                    a{
+                        display: block;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 16px;
+                        padding: 8px 0;
+                        transition: 0.3s ease;
+                        .iconify{
+                            color: $primary2;
+                            width: 25px;
+                            height: 25px;
+                            transition: 0.3s ease;
+                        }
+                        &:hover{
+                            color: $secondary;
+                            .iconify{color: $secondary;}
+                        }
+                    }
+                }
+            }
+            @media(max-width:1150px){
+                margin-bottom: 20px;
+            }
+            
+
+            &.AboutUs{width: 40%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
+            &.Sosmed{width: 30%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
+            &.LogoImage{width: 30%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
+        }
+    }
+    .copyright{
+        background: $primary2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        font-size: 12px;
+        color: #68769b;
+    }
+}
+// Footer

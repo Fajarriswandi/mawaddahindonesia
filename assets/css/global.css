@@ -238,7 +238,7 @@ h6 {
 
 .bgMenuMobile {
   display: none;
-  content: '';
+  content: "";
   width: 100%;
   height: 150px;
   background: orange;
@@ -822,6 +822,13 @@ h6 {
           align-items: center;
 }
 
+@media (max-width: 1100px) {
+  .eventOrganizer {
+    height: auto;
+    padding: 3em 20px;
+  }
+}
+
 .eventOrganizer .listEO {
   list-style: none;
   margin: 0;
@@ -842,9 +849,44 @@ h6 {
   width: 80%;
 }
 
+@media (max-width: 1400px) {
+  .eventOrganizer .listEO {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1100px) {
+  .eventOrganizer .listEO {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .eventOrganizer .listEO {
+    width: 100%;
+  }
+}
+
 .eventOrganizer .listEO li {
   width: 16.66%;
   padding: 15px 20px;
+  border-radius: 15px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+@media (max-width: 1400px) {
+  .eventOrganizer .listEO li {
+    width: 26.66%;
+  }
+}
+
+@media (max-width: 800px) {
+  .eventOrganizer .listEO li {
+    width: 50%;
+    margin-bottom: -40px;
+  }
 }
 
 .eventOrganizer .listEO li img {
@@ -854,9 +896,12 @@ h6 {
      object-fit: cover;
   border-radius: 15px;
   margin-bottom: 15px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  border: 4px solid transparent;
+}
+
+@media (max-width: 450px) {
+  .eventOrganizer .listEO li img {
+    height: 150px;
+  }
 }
 
 .eventOrganizer .listEO li h5 {
@@ -866,7 +911,133 @@ h6 {
   height: 70px;
 }
 
-.eventOrganizer .listEO li:hover img {
-  border: 4px solid #e4a630;
+@media (max-width: 450px) {
+  .eventOrganizer .listEO li h5 {
+    font-size: 16px;
+  }
+}
+
+.eventOrganizer .listEO li:hover {
+  background: #232d48;
+}
+
+.footerContainer {
+  background: url("../img/bgFooter.svg") no-repeat bottom center;
+  background-size: auto;
+  padding: 6em 0 10em 0;
+  position: relative;
+}
+
+.footerContainer .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1150px) {
+  .footerContainer .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footerContainer .footer {
+    width: 100%;
+  }
+}
+
+.footerContainer .footer .item .menuFooter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footerContainer .footer .item .menuFooter li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footerContainer .footer .item .menuFooter li a .iconify {
+  color: #232d48;
+  width: 25px;
+  height: 25px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footerContainer .footer .item .menuFooter li a:hover {
+  color: #e4a630;
+}
+
+.footerContainer .footer .item .menuFooter li a:hover .iconify {
+  color: #e4a630;
+}
+
+@media (max-width: 1150px) {
+  .footerContainer .footer .item {
+    margin-bottom: 20px;
+  }
+}
+
+.footerContainer .footer .item.AboutUs {
+  width: 40%;
+  padding: 0 20px;
+}
+
+@media (max-width: 1100px) {
+  .footerContainer .footer .item.AboutUs {
+    width: 80%;
+  }
+}
+
+.footerContainer .footer .item.Sosmed {
+  width: 30%;
+  padding: 0 20px;
+}
+
+@media (max-width: 1100px) {
+  .footerContainer .footer .item.Sosmed {
+    width: 80%;
+  }
+}
+
+.footerContainer .footer .item.LogoImage {
+  width: 30%;
+  padding: 0 20px;
+}
+
+@media (max-width: 1100px) {
+  .footerContainer .footer .item.LogoImage {
+    width: 80%;
+  }
+}
+
+.footerContainer .copyright {
+  background: #232d48;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #68769b;
 }
 /*# sourceMappingURL=global.css.map */

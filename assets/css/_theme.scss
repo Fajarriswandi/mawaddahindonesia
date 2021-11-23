@@ -630,7 +630,7 @@ h6 {
 // Event Organizer
 
 // Taaruf
-.taarufSection{
+.taarufSection {
     background: url("../img/bgTaaruf.png") no-repeat center center;
     background-size: cover;
     width: 100%;
@@ -640,13 +640,32 @@ h6 {
     justify-content: center;
     align-items: center;
     position: relative;
-   
+
     @media (max-width: $tablet) {
         height: auto;
         padding: 3em 20px;
     }
 }
 // Taaruf
+
+// Simple Aksen
+.simpleAksen {
+    background: url("../img/AksenrightHeader.svg") no-repeat top right;
+    background-size: inherit;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $tablet) {
+        height: auto;
+        padding: 3em 20px;
+    }
+}
+// Simple Aksen
 
 // Footer
 .footerContainer {
@@ -765,19 +784,19 @@ h6 {
 
 // Accordeon Primary
 .accordion-primary {
-    .primary-header{
-        background: #232d48 url('../img/headerAccordeon.svg') no-repeat top left;
+    .primary-header {
+        background: #232d48 url("../img/headerAccordeon.svg") no-repeat top left;
         background-size: contain;
-        margin-bottom: 10px ;
+        margin-bottom: 10px;
         text-align: center;
         border-radius: 10px;
         padding: 23px 30px;
-        h4{
+        h4 {
             font-size: 20px;
             margin: 0;
             color: $secondary;
         }
-        p{
+        p {
             margin: 0;
         }
     }
@@ -791,9 +810,9 @@ h6 {
                 color: $secondary;
                 border-radius: 10px;
                 font-weight: bold;
-                margin-bottom: 10px ;
-                &::after{
-                    background:  url('../img/chevronDown.svg') no-repeat center center;
+                margin-bottom: 10px;
+                &::after {
+                    background: url("../img/chevronDown.svg") no-repeat center center;
                     background-size: cover;
                 }
                 &.collapsed {
@@ -805,3 +824,82 @@ h6 {
     }
 }
 // Accordeon Primary
+
+// Gallery Image
+.galleryImage {
+    a {
+        text-decoration: none;
+        color: white;
+        .itemGallery {
+            background: $primary2;
+            padding: 0;
+            border-radius: 20px;
+            .thumbnail {
+                padding: 0;
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 20px;
+                display: table;
+                @media (max-width: $tablet) {
+                    height: 250px;
+                }
+            }
+            .content {
+                padding: 30px 25px;
+                position: relative;
+                h5 {
+                    margin: 0;
+                    font-family: unset;
+                }
+                small {
+                    color: #a4afcc;
+                }
+                &::after {
+                    display: table;
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    background: url("../img/chevronRightGold.svg") no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.mfp-figure {
+    position: relative;
+    .mfp-close{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        position: absolute;
+        top: 5px;
+        right: 5px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+    figure{
+        padding: 0;
+        .mfp-img {
+            height: auto;
+            width: 800px !important;
+            object-fit: cover;
+            border-radius: 20px !important;
+            display: table;
+            background: $primary2;
+        }
+    }
+    
+}
+.mfp-bottom-bar{
+    // background: red !important;
+    padding: 5px 20px 0 20px;
+}
+// Gallery Image

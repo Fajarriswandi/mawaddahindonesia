@@ -951,10 +951,6 @@ h6 {
   }
 }
 
-.eventOrganizer .listEO li:hover {
-  background: #232d48;
-}
-
 .taarufSection {
   background: url("../img/bgTaaruf.png") no-repeat center center;
   background-size: cover;

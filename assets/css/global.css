@@ -94,6 +94,7 @@
 body {
   background: #121828;
   color: white;
+  overflow-X: hidden;
 }
 
 h1,

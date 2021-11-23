@@ -1294,4 +1294,32 @@ h6 {
 .mfp-bottom-bar {
   padding: 5px 20px 0 20px;
 }
+
+.list-primary .list-group-item {
+  background: #232d48 url("../img/headerAccordeon.svg") no-repeat top left;
+  background-size: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 18px 20px 18px 60px;
+  color: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.list-primary .list-group-item:hover {
+  background: #2d3a5e url("../img/headerAccordeon.svg") no-repeat top left;
+  background-size: contain;
+}
+
+.list-primary .list-group-item .iconify {
+  color: #e4a630;
+  width: 20px;
+  height: 20px;
+}
+
+.list-primary .list-group-item h3 {
+  color: #e4a630;
+  margin: 0;
+  font-size: 20px;
+}
 /*# sourceMappingURL=global.css.map */

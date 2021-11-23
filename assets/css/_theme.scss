@@ -629,10 +629,29 @@ h6 {
 }
 // Event Organizer
 
+// Taaruf
+.taarufSection{
+    background: url("../img/bgTaaruf.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+    @media (max-width: $tablet) {
+        height: auto;
+        padding: 3em 20px;
+    }
+}
+// Taaruf
+
 // Footer
 .footerContainer {
-    background:  url('../img/bgFooter.svg') no-repeat bottom center;
-    background-size:auto;
+    background: url("../img/bgFooter.svg") no-repeat bottom center;
+    background-size: auto;
     padding: 6em 0 10em 0;
     position: relative;
     .footer {
@@ -641,51 +660,71 @@ h6 {
         align-items: center;
         width: 80%;
         margin: 0 auto;
-        
-        @media(max-width:1150px){
+
+        @media (max-width: 1150px) {
             flex-direction: column;
         }
-        @media(max-width:$tablet){width: 100%;}
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
 
         .item {
-            
-            .menuFooter{
+            .menuFooter {
                 list-style: none;
                 padding: 0;
                 margin: 0;
                 text-align: left;
-                li{
-                    a{
+                li {
+                    a {
                         display: block;
                         color: white;
                         text-decoration: none;
                         font-size: 16px;
                         padding: 8px 0;
                         transition: 0.3s ease;
-                        .iconify{
+                        .iconify {
                             color: $primary2;
                             width: 25px;
                             height: 25px;
                             transition: 0.3s ease;
                         }
-                        &:hover{
+                        &:hover {
                             color: $secondary;
-                            .iconify{color: $secondary;}
+                            .iconify {
+                                color: $secondary;
+                            }
                         }
                     }
                 }
             }
-            @media(max-width:1150px){
+            @media (max-width: 1150px) {
                 margin-bottom: 20px;
             }
-            
 
-            &.AboutUs{width: 40%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
-            &.Sosmed{width: 30%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
-            &.LogoImage{width: 30%;padding: 0 20px;@media(max-width:$tablet){width: 80%;}}
+            &.AboutUs {
+                width: 40%;
+                padding: 0 20px;
+                @media (max-width: $tablet) {
+                    width: 80%;
+                }
+            }
+            &.Sosmed {
+                width: 30%;
+                padding: 0 20px;
+                @media (max-width: $tablet) {
+                    width: 80%;
+                }
+            }
+            &.LogoImage {
+                width: 30%;
+                padding: 0 20px;
+                @media (max-width: $tablet) {
+                    width: 80%;
+                }
+            }
         }
     }
-    .copyright{
+    .copyright {
         background: $primary2;
         position: absolute;
         bottom: 0;
@@ -699,9 +738,8 @@ h6 {
 }
 // Footer
 
-
 // Nav Next
-.navNext{
+.navNext {
     display: table;
     position: fixed;
     right: -22px;
@@ -709,3 +747,61 @@ h6 {
     transform: translateY(-50%);
 }
 // Nav Next
+
+// Title with gold divider
+.titleDividerGold {
+    background: url("../img/dividerGold.svg") no-repeat top center;
+    background-size: inherit;
+    display: table;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    padding: 40px 0 0 0;
+    h3 {
+        font-family: unset;
+        margin-bottom: 0;
+    }
+}
+// Title with gold divider
+
+// Accordeon Primary
+.accordion-primary {
+    .primary-header{
+        background: #232d48 url('../img/headerAccordeon.svg') no-repeat top left;
+        background-size: contain;
+        margin-bottom: 10px ;
+        text-align: center;
+        border-radius: 10px;
+        padding: 23px 30px;
+        h4{
+            font-size: 20px;
+            margin: 0;
+            color: $secondary;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    .accordion-item {
+        background: $primary;
+        .accordion-header {
+            font-family: unset;
+            .accordion-button {
+                background: #232d48;
+                padding: 35px 30px;
+                color: $secondary;
+                border-radius: 10px;
+                font-weight: bold;
+                margin-bottom: 10px ;
+                &::after{
+                    background:  url('../img/chevronDown.svg') no-repeat center center;
+                    background-size: cover;
+                }
+                &.collapsed {
+                    background: #151d32;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+// Accordeon Primary

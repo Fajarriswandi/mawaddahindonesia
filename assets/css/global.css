@@ -921,6 +921,34 @@ h6 {
   background: #232d48;
 }
 
+.taarufSection {
+  background: url("../img/bgTaaruf.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+  .taarufSection {
+    height: auto;
+    padding: 3em 20px;
+  }
+}
+
 .footerContainer {
   background: url("../img/bgFooter.svg") no-repeat bottom center;
   background-size: auto;
@@ -1048,5 +1076,65 @@ h6 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.titleDividerGold {
+  background: url("../img/dividerGold.svg") no-repeat top center;
+  background-size: inherit;
+  display: table;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+
+.titleDividerGold h3 {
+  font-family: unset;
+  margin-bottom: 0;
+}
+
+.accordion-primary .primary-header {
+  background: #232d48 url("../img/headerAccordeon.svg") no-repeat top left;
+  background-size: contain;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 23px 30px;
+}
+
+.accordion-primary .primary-header h4 {
+  font-size: 20px;
+  margin: 0;
+  color: #e4a630;
+}
+
+.accordion-primary .primary-header p {
+  margin: 0;
+}
+
+.accordion-primary .accordion-item {
+  background: #121828;
+}
+
+.accordion-primary .accordion-item .accordion-header {
+  font-family: unset;
+}
+
+.accordion-primary .accordion-item .accordion-header .accordion-button {
+  background: #232d48;
+  padding: 35px 30px;
+  color: #e4a630;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.accordion-primary .accordion-item .accordion-header .accordion-button::after {
+  background: url("../img/chevronDown.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.accordion-primary .accordion-item .accordion-header .accordion-button.collapsed {
+  background: #151d32;
+  font-weight: normal;
 }
 /*# sourceMappingURL=global.css.map */

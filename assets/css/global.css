@@ -321,7 +321,7 @@ h6 {
 @media (max-width: 450px) {
   .logoMobile {
     left: 45%;
-    padding: 25px 15px;
+    padding: 15px 20px 35px 20px;
     -webkit-transform: translateX(-45%);
             transform: translateX(-45%);
   }
@@ -338,8 +338,8 @@ h6 {
   .navMobileTrigger {
     display: table;
     content: "";
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     background: #232d48 url("../img/menuMobile.svg") center center;
     background-size: 80%;
     position: fixed;
@@ -356,8 +356,8 @@ h6 {
   .navMobileTrigger {
     top: 15px;
     right: 15px;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -1138,6 +1138,7 @@ h6 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 800;
 }
 
 .titleDividerGold {

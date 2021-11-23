@@ -171,7 +171,7 @@ h6 {
     }
     @media (max-width: 450px) {
         left: 45%;
-        padding: 25px 15px;
+        padding: 15px 20px 35px 20px;
         transform: translateX(-45%);
         img {
             width: 80px;
@@ -184,8 +184,8 @@ h6 {
     @media (max-width: $tablet) {
         display: table;
         content: "";
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         background: $primary2 url("../img/menuMobile.svg") center center;
         background-size: 80%;
         position: fixed;
@@ -199,8 +199,8 @@ h6 {
     @media (max-width: 450px) {
         top: 15px;
         right: 15px;
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
     }
 
     &.closeIcon {
@@ -764,6 +764,7 @@ h6 {
     right: -22px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 800;
 }
 // Nav Next
 
